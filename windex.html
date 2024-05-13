@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea, input[type="text"], input[type="date"], input[type="time"], input[type="submit"] {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Birthday Wishes</h1>
+        <form id="wishesForm">
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+            <label for="contact">Contact Number:</label><br>
+            <input type="text" id="contact" name="contact"><br>
+            <label for="date">Date:</label><br>
+            <input type="date" id="date" name="date"><br>
+            <label for="time">Time:</label><br>
+            <input type="time" id="time" name="time"><br>
+            <input type="submit" value="Send Wishes">
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
